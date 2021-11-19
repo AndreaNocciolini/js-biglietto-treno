@@ -32,7 +32,7 @@ let overageDiscountFix = overageDiscount.toFixed(2);
 console.log(`Elder's Discount(>65): ` + overageDiscountFix + `€`);
 
 let overagePrice = ticketPriceFix - overageDiscountFix;
-let overagePriceFix = underagePrice.toFixed(2);
+let overagePriceFix = overagePrice.toFixed(2);
 console.log(`Overage's ticket price: ` + overagePriceFix + `€`)
 // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
 
