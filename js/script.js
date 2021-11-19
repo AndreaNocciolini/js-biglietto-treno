@@ -8,6 +8,12 @@ console.log(`Age: ` + age)
 
 // Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
+
+const kmPrice = 0.21;
+
+let ticketPrice = kmPrice * distance;
+console.log(`Ticket price: ` + ticketPrice + `€`);  
+
 // va applicato uno sconto del 20% per i minorenni
 // va applicato uno sconto del 40% per gli over 65.
 
