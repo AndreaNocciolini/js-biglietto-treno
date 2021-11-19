@@ -12,10 +12,31 @@ console.log(`Age: ` + age)
 const kmPrice = 0.21;
 
 let ticketPrice = kmPrice * distance;
-console.log(`Ticket price: ` + ticketPrice + `€`);  
+let ticketPriceFix = ticketPrice.toFixed(2);
+console.log(`Ticket price: ` + ticketPriceFix + `€`);  
 
 // va applicato uno sconto del 20% per i minorenni
+
+let underageDiscount = parseFloat((ticketPriceFix * 20) / 100);
+let underageDiscountFix = underageDiscount.toFixed(2);
+console.log(`Underage's Discount(<18): ` + underageDiscountFix + `€`);
+
 // va applicato uno sconto del 40% per gli over 65.
 
+let overageDiscount = parseFloat((ticketPriceFix * 40) / 100);
+let overageDiscountFix = overageDiscount.toFixed(2);
+console.log(`Elder's Discount(>65): ` + overageDiscountFix + `€`);
+
 // L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
+
+if (age < 18) {
+    document.getElementById(`my_div`).innerHTML = `The cost of the ticket will be <span class="price">${ticketPriceFix - underageDiscountFix}</span> €.`;
+} else if (age > 65) {
+    document.getElementById(`my_div`).innerHTML = `The cost of the ticket will be <span class="price">${ticketPriceFix - overageDiscountFix}</span> €.`;
+} else {
+    document.getElementById(`my_div`).innerHTML = `The cost of the ticket will be <span class="price">${ticketPriceFix}</span> €.`
+}
+
+
+
 

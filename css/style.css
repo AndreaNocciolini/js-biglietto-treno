@@ -3,3 +3,15 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right top, #ff0000, #ff2720, #ff3c35, #ff4c47, #ff5b58, #ff6865, #ff7472, #ff7f7e, #ff8c8b, #ff9897, #ffa4a4, #ffb0b0);
+}
+
+.price {
+    font-weight: bold;
+}
